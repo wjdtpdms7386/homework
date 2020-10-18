@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Webpage Title -->
+    <title>달 사세요~</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script language="JavaScript">
+        function checkemailaddy() {
+            if (form.email_select.value == 'etc') {
+                form.email2.readOnly = false;
+               form.email2.value = '';
+               form.email2.focus();
+            } else {
+                form.email2.readOnly = true;
+                form.email2.value = form.email_select.value;
+            }
+        }
+
+    </script>
+
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            font-family: 'Sunflower', sans-serif;
+        }
+
+        body {
+            background-color: #E6F8E0;
+        }
+
+        .blue-font {
+            color: darkblue;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        .img {
+            background-image: url('https://steptohealth.co.kr/wp-content/uploads/2018/03/art-1-13-1-e1548332961443.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            width: 800px;
+            height: 500px;
+        }
+
+        .info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1, h5 {
+            display: inline;
+        }
+
+        .order {
+            text-align: center;
+        }
+
+        .orders {
+            margin-top: 100px;
+        }
+    </style>
+
+    <script>
+        function order() {
+            alert('주문이 완료되었습니다 ♪♬');
+        }
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="img"></div>
+    <div class="info">
+        <h1 class="blue-font">달 토지 분양합니다</h1>
+        <h5>가격: 24,000원/1에이커(4046㎡)</h5>
+        <p>'달 대사관' 최초 설립자 데니스 호프가 분양하는 달 토지 소유권을 판매합니다. 달 탐사 성공시 부동산 부자가 될 절호의 기회!</p>
+        <p>더 늦기전에 특별한 로망을 실현해보세요! ★★★마감임박★★★</p>
+        <hr class="my-4">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text badge-info">주문자 성함</span>
+            </div>
+            <input type="text" class="form-control" id="order-name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text badge-info">주문 면적</label>
+            </div>
+            <select class="custom-select" id="order-count">
+                <option selected value=""> -- 원하는 면적 선택(1에이커당 4046㎡) --</option>
+                <option value="1">1 에이커</option>
+                <option value="2">2 에이커</option>
+                <option value="3">3 에이커</option>
+                <option value="4">4 에이커</option>
+                <option value="5">5 에이커</option>
+                <option value="6">6 에이커</option>
+                <option value="7">7 에이커</option>
+                <option value="8">8 에이커</option>
+                <option value="9">9 에이커</option>
+                <option value="10">10 에이커</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text badge-info">분양권 받을 주소</span>
+            </div>
+            <input type="text" class="form-control" id="order-address">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text badge-info">이메일</span>
+            </div>
+            <input name="email1" type="text" class="form-control" id="email1">
+            <div class="input-group-text" id="btnGroupAddon">@</div>
+            <form name="form" method="post">
+                <input name="email2" type="text" class="form-control" id="email2">
+                <select class="box custom-select" name="email_select" id="email_select" onChange="checkemailaddy();">
+                    <option selected value=""> :: 선택하세요 ::</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="msn.com">msn.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="yahoo.com">yahoo.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="etc">직접입력</option>
+                </select>
+            </form>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text badge-info">전화번호</span>
+            </div>
+            <input type="text" class="form-control" id="order-phone">
+        </div>
+        <hr class="my-4">
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-secondary btn-lg btn-block">주문하기</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
